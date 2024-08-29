@@ -1,7 +1,12 @@
 spring:
+  main:
+    allow-bean-definition-overriding: true
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3307/spring_batch?serverTimezone=Asia/Seoul
     username: tester
     password: 1234567890
 
+  batch:
+    jdbc:
+      initialize-schema: never # ??? ?? ?? ??
